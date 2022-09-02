@@ -20,7 +20,8 @@ function App() {
   console.log("background", background);
 
   return (
-    <div className={appStyles.background(background)}>
+    <>
+      <div className={appStyles.background(background)} />
       <div className={appStyles.container}>
         <Logo />
         <appStyles.subtitle>Product Solutions</appStyles.subtitle>
@@ -34,8 +35,10 @@ function App() {
         <Subheading.SH14>
           Please reach out for more details on past work.
         </Subheading.SH14>
+        <br />
+        <br />
       </div>
-    </div>
+    </>
   );
 }
 
