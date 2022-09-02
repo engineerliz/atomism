@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Background from '../background/Background';
 import { getItem } from '../companies/portfolioWork';
 import { companiesStyles } from '../companies/companies.styles';
@@ -7,19 +7,26 @@ import { PortfolioItemProps } from '../companies/PortfolioItem';
 import { Colors } from '../styles/colors';
 import { Heading, Subheading } from '../styles/fonts';
 import { workPageStyles } from './workPage.styles';
+import DiamondImg from '../../assets/diamond.png';
 
 const WorkPage = () => {
   const { id } = useParams();
   const [item, setItem] = useState<PortfolioItemProps>();
+  const navigate = useNavigate();
+
   useEffect(() => {
     id && setItem(getItem(id));
   }, []);
-  console.log('id', id);
-  console.log('item', item);
+
   return (
     <div>
       <Background />
       <workPageStyles.container>
+        <img
+          src={DiamondImg}
+          className={workPageStyles.diamond}
+          onClick={() => navigate('/')}
+        />
         <Heading.H34 className={workPageStyles.title}>{item?.name}</Heading.H34>
         <Subheading.SH18>{item?.description}</Subheading.SH18>
         {item?.link && (

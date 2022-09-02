@@ -6,6 +6,10 @@ const BackgroundColors = {
   yellow: '#FFF171',
   orange: '#FF9877',
   pink: '#FF888F',
+  green: '#B8FF97',
+  blue: '#2FB4FF',
+  coral: '#FF7979',
+  bluePurple: '#8C79FF',
 }
 
 const ColorOptions = List([
@@ -14,12 +18,16 @@ const ColorOptions = List([
   BackgroundColors.yellow,
   BackgroundColors.orange,
   BackgroundColors.pink,
+  BackgroundColors.green,
+  BackgroundColors.blue,
+  BackgroundColors.coral,
+  BackgroundColors.bluePurple,
 ]);
 
 const generateRandom = () => {
 
   const min = 0;
-  const max = 4
+  const max = 8;
     // find diff
     const difference = max - min;
 

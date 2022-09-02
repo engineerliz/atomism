@@ -24,6 +24,9 @@ const Heading = {
     ${headingFontWeight};
     font-size: 34px;
     color: ${props => props.color || Colors.Black};
+    ${BreakPoints.sm} {
+      font-size: 26px;
+    }
   `,
   H26: styled.div`
     ${headingFontWeight};
