@@ -49,6 +49,9 @@ const Subheading = {
     ${subheadingFontWeight};
     font-size: 22px;
     color: ${props => props.color || Colors.Black};
+    ${BreakPoints.sm} {
+      font-size: 18px;
+    }
   `,
   SH18: styled.div`
     ${subheadingFontWeight};
@@ -62,6 +65,9 @@ const Subheading = {
     ${subheadingFontWeight};
     font-size: 14px;
     color: ${props => props.color || Colors.Black};
+    ${BreakPoints.sm} {
+      font-size: 12px;
+    }
   `,
   SH12: styled.div`
     ${subheadingFontWeight};

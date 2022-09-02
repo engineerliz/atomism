@@ -34,7 +34,7 @@ export const companiesStyles = {
     }
   }),
   title: css({
-    marginBottom: 8,
+    marginBottom: 6,
   }),
   hashtags: styled.div`
     display: flex;

@@ -21,7 +21,7 @@ const generateRandom = () => {
   const min = 0;
   const max = 4
     // find diff
-    let difference = max - min;
+    const difference = max - min;
 
     // generate random number 
     let rand = Math.random();

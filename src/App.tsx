@@ -1,40 +1,51 @@
-import React, { useEffect, useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { Card } from "./components/card/Card";
-import Logo from "./components/logo/Logo";
-import { getBackgroundColor } from "./background";
-import { css } from "@emotion/css";
-import Social from "./components/socials/Social";
-import { appStyles } from "./app.styles";
-import Company from "./components/companies/Company";
-import { List } from "immutable";
-import { Companies } from "./components/companies/companies";
-import { Subheading } from "./components/styles/fonts";
+import React from 'react';
+import { useEffect, useState } from 'react';
+import './App.css';
+import Logo from './components/logo/Logo';
+import { getBackgroundColor } from './background';
+import Social from './components/socials/Social';
+import { appStyles } from './app.styles';
+import PortfolioItem from './components/companies/PortfolioItem';
+import { Companies, MiniDesigns } from './components/companies/portfolioWork';
+import { Subheading } from './components/styles/fonts';
+import Background from './components/background/Background';
 
 function App() {
-  const [background, setBackground] = useState<string>();
-  useEffect(() => {
-    setBackground(getBackgroundColor());
-  }, []);
-  console.log("background", background);
-
   return (
     <>
-      <div className={appStyles.background(background)} />
+      <Background />
+      {/* <div className={appStyles.background(background)} /> */}
       <div className={appStyles.container}>
         <Logo />
-        <appStyles.subtitle>Product Solutions</appStyles.subtitle>
+        <Subheading.SH22 className={appStyles.subtitle}>
+          Product Solutions: Design, Engineering, Strategy
+        </Subheading.SH22>
         <Social />
+        <Subheading.SH18 className={appStyles.sectionTitle}>
+          Previous Client Work
+        </Subheading.SH18>
         <appStyles.companiesContainer>
-          {Companies.map((company) => (
-            <Company {...company} hashtags={company.hashtags} />
+          {Companies.toList().map((company) => (
+            <PortfolioItem
+              key={company.name}
+              {...company}
+              hashtags={company.hashtags}
+            />
+          ))}
+        </appStyles.companiesContainer>
+        <Subheading.SH18 className={appStyles.sectionTitle}>
+          Mini Designs
+        </Subheading.SH18>
+        <appStyles.companiesContainer>
+          {MiniDesigns.toList().map((company) => (
+            <PortfolioItem
+              key={company.name}
+              {...company}
+              hashtags={company.hashtags}
+            />
           ))}
         </appStyles.companiesContainer>
         <br />
-        <Subheading.SH14>
-          Please reach out for more details on past work.
-        </Subheading.SH14>
         <br />
         <br />
       </div>
