@@ -7,6 +7,10 @@ import { getBackgroundColor } from "./background";
 import { css } from "@emotion/css";
 import Social from "./components/socials/Social";
 import { appStyles } from "./app.styles";
+import Company from "./components/companies/Company";
+import { List } from "immutable";
+import { Companies } from "./components/companies/companies";
+import { Subheading } from "./components/styles/fonts";
 
 function App() {
   const [background, setBackground] = useState<string>();
@@ -17,32 +21,20 @@ function App() {
 
   return (
     <div className={appStyles.background(background)}>
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
       <div className={appStyles.container}>
         <Logo />
         <appStyles.subtitle>Product Solutions</appStyles.subtitle>
         <Social />
+        <appStyles.companiesContainer>
+          {Companies.map((company) => (
+            <Company {...company} hashtags={company.hashtags} />
+          ))}
+        </appStyles.companiesContainer>
+        <br />
+        <Subheading.SH14>
+          Please reach out for more details on past work.
+        </Subheading.SH14>
       </div>
-      {/* <div>Atomism</div>
-      <Card
-        frontColor='#7BFFD0'
-        backColor='#FFF171'
-        height={400}
-        width={280}
-      /> */}
     </div>
   );
 }

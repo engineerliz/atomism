@@ -9,7 +9,7 @@ export const appStyles = {
   }),
   container: css({
     position: 'absolute',
-    top: '40%',
+    top: '35%',
     left: '50%',
     transform: 'translate(-50%, 0)',
     display: 'flex',
@@ -18,7 +18,7 @@ export const appStyles = {
       width: '90%',
 
     '@media only screen and (max-width: 768px)': {
-      top: '35%',
+      top: '20%',
     }
   }),
   subtitle: styled.div`
@@ -29,6 +29,15 @@ export const appStyles = {
     '@media only screen and (max-width: 768px)': {
       font-size: 20px;
       margin: 16px 0;
+    }
+  `,
+  companiesContainer: styled.div`
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    '@media only screen and (max-width: 768px)': {
+      flex-direction: column;
+      margin-top: 20px;
     }
   `
 }
