@@ -45,6 +45,7 @@ export const appStyles = {
     flex-direction: row;
     flex-wrap: wrap;
     margin: 8px 0 12px;
+    justify-content: center;
     ${BreakPoints.sm} {
       flex-direction: column;
     }
