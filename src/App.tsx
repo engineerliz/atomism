@@ -34,7 +34,7 @@ function App() {
           ))}
         </appStyles.companiesContainer>
         <Subheading.SH18 className={appStyles.sectionTitle}>
-          Fun Designs (designs made for fun)
+          More Design Work
         </Subheading.SH18>
         <appStyles.companiesContainer>
           {MiniDesigns.toList().map((company) => (
