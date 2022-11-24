@@ -1,8 +1,6 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
 import './App.css';
 import Logo from './components/logo/Logo';
-import { getBackgroundColor } from './background';
 import Social from './components/socials/Social';
 import { appStyles } from './app.styles';
 import PortfolioItem from './components/companies/PortfolioItem';
