@@ -14,12 +14,11 @@ export interface PortfolioItemProps {
   images: List<string>;
   hashtags?: List<string>;
 }
+
 const PortfolioItem = ({
   name,
   description,
   id,
-  link,
-  logo,
   hashtags,
 }: PortfolioItemProps) => {
   const navigate = useNavigate();
