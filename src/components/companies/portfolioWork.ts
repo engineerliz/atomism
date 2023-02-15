@@ -42,6 +42,13 @@ import versus2 from "../../assets/portfolio/versus/Versus2.png";
 import versus3 from "../../assets/portfolio/versus/Versus3.png";
 import versus4 from "../../assets/portfolio/versus/Versus4.png";
 import versus5 from "../../assets/portfolio/versus/Versus5.png";
+import origamii1 from "../../assets/portfolio/origamii/origamii_people.png";
+import origamii2 from "../../assets/portfolio/origamii/origamii_products.png";
+import origamii3 from "../../assets/portfolio/origamii/origamii_dataTable.png";
+import origamii4 from "../../assets/portfolio/origamii/origamii_links.png";
+import origamii5 from "../../assets/portfolio/origamii/origamii_terms.png";
+import origamii6 from "../../assets/portfolio/origamii/origamii_codeCanvas.png";
+import cypress1 from "../../assets/portfolio/cypress/cypress1.png";
 
 export const Companies: Map<string, PortfolioItemProps> = Map({
   'dub': {
@@ -52,6 +59,14 @@ export const Companies: Map<string, PortfolioItemProps> = Map({
     link: 'https://www.dubapp.com/',
     images: List([Dub2, Dub1, Dub3, Dub4, Dub5]),
     hashtags: List(['#engineering', '#design', '#product-management'])
+  },
+  'origamii': {
+    id: 'origamii',
+    name: 'Origamii',
+    logo: '',
+    description: 'Origamii is a productivity tool that helps team collaborate better through a standarized information storage and communication layer.',
+    images: List([origamii1, origamii6, origamii2, origamii3, origamii4, origamii5]),
+    hashtags: List(['#design', '#product-management'])
   },
   'curio': {
     id: 'curio',
@@ -96,7 +111,16 @@ export const Companies: Map<string, PortfolioItemProps> = Map({
     link: 'https://www.meetdani.com/',
     images: List([dani]),
     hashtags: List(['#engineering', '#design', '#product-strategy'])
+  },
+    'cypress': {
+    id: 'cypress',
+    name: 'Cypress',
+    logo: '',
+    description: 'Cypress is a treasury and funding management tool for startups to manage, invest, and spend their assets in an automated and risk adjusted way.',
+    images: List([cypress1]),
+    hashtags: List(['#design', '#product-strategy'])
   }
+
 })
 
 export const MiniDesigns: Map<string, PortfolioItemProps> = Map({
